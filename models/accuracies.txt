@@ -1,0 +1,23 @@
+Model Accuracies (80/20 split):
+
+1.
+Random Forest:
+
+Training Metrics               Test Metrics
+R2 score: 0.8475               R2 score: 0.7235
+MSLE: 0.0022                   MSLE: 0.0041
+
+2.
+Decision Tree Bagging:
+
+Training Metrics               Test Metrics
+R2 score: 0.8380               R2 score: 0.7105
+MSLE: 0.0023                   MSLE: 0.0042
+
+3.
+Decision Tree:
+
+Training Metrics               Test Metrics
+R2 score: 0.8310               R2 score: 0.5994
+MSLE: 0.0024                   MSLE: 0.0059
+
