@@ -65,15 +65,3 @@ plt.ylabel("Predicted Values")
 plt.legend()
 plt.show()
 
-# Feature importance
-# feature_importance = model.feature_importances_
-# sorted_idx = np.argsort(feature_importance)
-# pos = np.arange(sorted_idx.shape[0]) + .5
-
-# plt.figure(figsize=(12, 8))
-# plt.barh(pos, feature_importance[sorted_idx], align='center')
-# plt.yticks(pos, X.columns[sorted_idx])
-# plt.xlabel('Feature Importance')
-# plt.title('Variable Importance')
-# plt.tight_layout()
-# plt.show()

@@ -44,7 +44,7 @@ def run_model():
 def predict_gross(input_data, best_model):
     processed_data = preprocess_data(pd.DataFrame([input_data]))
     expected_features = best_model.feature_names_in_
-    
+    print(expected_features)
     for feature in expected_features:
         if feature not in processed_data.columns:
             processed_data[feature] = 0
@@ -56,17 +56,17 @@ def predict_gross(input_data, best_model):
 
 def predict_gross_range(gross):
     if gross <= 10_000_000:
-        return "Low Revenue (<= $10M)"
+        return "Low Revenue"
     elif gross <= 40_000_000:
-        return "Medium-Low Revenue ($10M - $40M)"
+        return "Medium-Low Revenue"
     elif gross <= 70_000_000:
-        return "Medium Revenue ($40M - $70M)"
+        return "Medium Revenue"
     elif gross <= 120_000_000:
-        return "Medium-High Revenue ($70M - $120M)"
+        return "Medium-High Revenue"
     elif gross <= 200_000_000:
-        return "High Revenue ($120M - $200M)"
+        return "High Revenue"
     else:
-        return "Ultra High Revenue (>= $200M)"
+        return "Ultra High Revenue"
 
 st.markdown(
     """

@@ -177,16 +177,11 @@ def main():
     df4 = pd.read_csv("SML-Project-1\datasets\Kaggle\Top-500-movies.csv")
     df5 = pd.read_csv("SML-Project-1\datasets\Kaggle\movie_data_tmbd.csv")
 
-    # 1) Initial Exploration and Cleaning
     cleaned_df1 = remove_unnecessary_df1(df1)
     cleaned_df2 = remove_unnecessary_df2(df2)
-    num_rows_with_budget = count_budget_filled_rows(cleaned_df1)
-
-    print(f"Number of rows with numeric 'budget': {num_rows_with_budget}")
     initial_dataset = merge_datasets_initial(cleaned_df1, cleaned_df2)
     # write_to_csv(initial_dataset, 'SML-Project-1\datasets\Initial\initial_dataset.csv')
 
-    # 2) Thirst for More data
     cleaned_df3 = remove_unnecessary_df3(df3)
     cleaned_df4 = remove_unnecessary_df4(df4)
     intermediate_dataset = merge_datasets_intermediate(cleaned_df4, cleaned_df3)
@@ -202,10 +197,6 @@ def main():
     initial_merge = check_duplicates1(initial_dataset, dataset)
     intermediate_merge = check_duplicates2(intermediate_dataset, dataset2)
     Final_merge = check_duplicates3(initial_merge, intermediate_merge)
-
-    # Further completing up Final_merge by manual scouring for budget or gross and using our 4 databases for more movies we arrive at final_dataset.
-
-    # 3) Introducing final_dataset: Arrived by cleaning and dropping colums which were repetitive  and dropping null values
 
     # num_rows_with_budget = count_budget_filled_rows(cleaned_df)
     # print(f"Number of rows with numeric 'budget': {num_rows_with_budget}")

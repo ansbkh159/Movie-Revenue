@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("../revised datasets/output.csv")
+df = pd.read_csv("revised datasets/output.csv")
 
 total_budget = df.groupby("name")["budget"].sum()
 total_gross = df.groupby("name")["gross"].sum()
